@@ -16,7 +16,9 @@ async function enviarMensagem() {
     vaiParaFinalDoChat();
     
     // Envia requisição com a mensagem para a API do ChatBot
-    const resposta = await fetch("http://127.0.0.1:5000/chat", {
+    const urlLocal = "http://127.0.0.1:5000/chat"
+    const urlServer = "https://chat-ngpp.onrender.com/chat"
+    const resposta = await fetch(urlServer, {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
